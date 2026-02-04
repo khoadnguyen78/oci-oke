@@ -1,0 +1,17 @@
+# Global common settings
+global:
+  namespace: default
+
+typescript-docker-multi-stage-build:
+  enabled: true
+  replicaCount: 1
+  image:
+    repository: myregistry/typescript-docker-multi-stage-build
+    tag: latest
+
+example-typescript-package:
+  enabled: true
+  replicaCount: 1
+  image:
+    repository: myregistry/example-typescript-package
+    tag: latest

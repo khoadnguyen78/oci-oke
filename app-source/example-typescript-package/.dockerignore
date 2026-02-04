@@ -1,0 +1,9 @@
+node_modules
+.git
+.github
+dist
+cjs
+esm
+umd
+types
+*.log

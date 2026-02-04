@@ -1,0 +1,12 @@
+replicaCount: 1
+
+image:
+  repository: sin.ocir.io/typescript-docker-multi-stage-build
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 3000
+
+resources: {}

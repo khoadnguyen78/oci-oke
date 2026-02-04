@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "typescript-docker-multi-stage-build.fullname" . }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "typescript-docker-multi-stage-build.name" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "typescript-docker-multi-stage-build.name" . }}
+    spec:
+      containers:
+        - name: {{ include "typescript-docker-multi-stage-build.name" . }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports:
+            - containerPort: {{ .Values.service.port }}
