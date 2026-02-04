@@ -1,12 +1,12 @@
 name: CI + Scan + Build Docker Image
-# on: workflow_dispatch   # disable workflow
-on:
-  pull_request:
-  push:
-    branches:
-      - main
-    tags:
-      - "v*"
+on: workflow_dispatch   # disable workflow
+# on:
+#   pull_request:
+#   push:
+#     branches:
+#       - main
+#     tags:
+#       - "v*"
 
 jobs:
   # --------------------------------

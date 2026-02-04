@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: {{ .Release.Namespace }}
+data:
+{{- range $key, $val := .Values.configMaps.appConfig }}
+  {{ $key }}: {{ $val | quote }}
+{{- end }}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: features-config
+  namespace: {{ .Release.Namespace }}
+data:
+{{- range $key, $val := .Values.configMaps.featureFlags }}
+  {{ $key }}: {{ $val | quote }}
+{{- end }}
