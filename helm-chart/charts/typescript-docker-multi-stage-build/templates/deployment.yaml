@@ -13,6 +13,8 @@ spec:
       labels:
         app: {{ include "typescript-docker-multi-stage-build.name" . }}
     spec:
+      imagePullSecrets:
+        {{- toYaml .Values.imagePullSecrets | nindent 8 }}
       containers:
         - name: {{ include "typescript-docker-multi-stage-build.name" . }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
