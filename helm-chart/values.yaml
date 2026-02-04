@@ -4,21 +4,6 @@ global:
 
 typescript-docker-multi-stage-build:
   enabled: true
-  replicaCount: 1
-  image:
-    repository: myregistry/typescript-docker-multi-stage-build
-    tag: latest
-
-example-typescript-package:
-  enabled: false
-  replicaCount: 1
-  image:
-    repository: myregistry/example-typescript-package
-    tag: latest
 
 docker-nodejs-application:
   enabled: true
-  replicaCount: 1
-  image:
-    repository: myregistry/docker-nodejs-application
-    tag: latest
