@@ -46,10 +46,6 @@ configMaps:
     LOG_LEVEL: info
     CACHE_TTL: "300"
 
-  featureFlags:
-    ENABLE_RECOMMENDATIONS: "true"
-    ENABLE_AUDIT_LOG: "false"
-
 # values for added secrets
 secrets:
   database:
